@@ -7,11 +7,12 @@
     <title>Try Git</title>
 </head>
 <body>
-    <h1>Try Git</h1>
+    <h1>Try Github</h1>
     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
      voluptates nam qui corrupti repudiandae ab saepe et sapiente 
      earum asperiores perferendis, 
     cupiditate ratione architecto dolor blanditiis 
     accusantium error consectetur? Dignissimos.</p>
+    <p>paragrap baru</p
 </body>
 </html>
