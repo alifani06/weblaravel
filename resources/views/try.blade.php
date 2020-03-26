@@ -13,6 +13,6 @@
      earum asperiores perferendis, 
     cupiditate ratione architecto dolor blanditiis 
     accusantium error consectetur? Dignissimos.</p>
-    <p>paragrap baru</p
+    <p>paragrap baru</p>
 </body>
 </html>
