@@ -16,7 +16,6 @@
                     <th scope="col">Kode Material</th>
                     <th scope="col">Deskripsi</th>
                     <th scope="col">jenis</th>
-                    
                     <th scope="col">Opi</th>
                 </tr>
                 </thead>
@@ -27,7 +26,8 @@
                         <td>{{$mtr->nama}}</td>
                         <td>{{$mtr->kode}}</td>
                         <td>{{$mtr->deskripsi}}</td>
-                        <!-- <td>{{$mtr->supplier->jenis}}</td>     -->
+                        <td>{{$mtr->jenis}}</td>
+                        ?
                         <td>
                         <a href="{{$mtr->id}}/edit" class="btn btn-success">Ubah</a>
                         <form action="/materials/{{ $mtr->id }}" method="post" class="d-inline">

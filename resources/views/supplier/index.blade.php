@@ -16,6 +16,7 @@
                     <th scope="col">Alamat</th>
                     <th scope="col">Email</th>
                     <th scope="col">No Telepon</th>
+                    <th scope="col">Jenis</th>
                     <th scope="col">Opi</th>
                 </tr>
                 </thead>
@@ -27,6 +28,7 @@
                         <td>{{$sup->alamat}}</td>
                         <td>{{$sup->email}}</td>
                         <td>{{$sup->no_hp}}</td>
+                        <td>{{$sup->material_jenis}}</td>
                      
                         <td>
                         <a href="{{$sup->id}}/edit" class="btn btn-success">Ubah</a>

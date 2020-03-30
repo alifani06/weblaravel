@@ -12,8 +12,8 @@ class Supplier extends Model
 
 public function material()
 {
-    // return $this->hasOne('App\Material');
-     return $this->belongsTo('App\Material');
+
+     return $this->belongsTo('App\Material', 'kode', 'id');
 
 }    
 
