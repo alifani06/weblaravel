@@ -23,6 +23,11 @@
             <input type="text" class="form-control @error('deskripsi') is-invalid @enderror" id="deskripsi" name="deskripsi" value="{{ $material->deskripsi }}">
             @error('deskripsi')<div class="invalid-feedback">{{ $message }}</div>@enderror
         </div>
+        <div class="form-group">
+            <label for="jenis">jenis</label>
+            <input type="text" class="form-control @error('jenis') is-invalid @enderror" id="jenis" name="jenis" value="{{ $material->jenis }}">
+            @error('jenis')<div class="invalid-feedback">{{ $message }}</div>@enderror
+        </div>
 
 <button type="submit" class="btn btn-success">Ubah</button>
     </form>

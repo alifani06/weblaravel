@@ -40,8 +40,8 @@ class SupplierController extends Controller
             'nama' => 'required',
             'alamat' => 'required',
             'email' => 'required',
-            'no_hp' => 'required|size:12',
-            'jenis' => 'required'
+            'no_hp' => 'required|size:12'
+           
 
         ]);
 
@@ -87,8 +87,8 @@ class SupplierController extends Controller
             'nama' => 'required',
             'alamat' => 'required',
             'email' => 'required',
-            'no_hp' => 'required|size:12',
-            'jenis' => 'required'
+            'no_hp' => 'required|size:12'
+            
 
         ]);
         Supplier::where('id',$supplier->id)
@@ -96,8 +96,8 @@ class SupplierController extends Controller
                 'nama' => $request->nama,
                 'alamat' => $request->alamat,
                 'email' => $request->email,
-                'no_hp'=> $request->no_hp,
-                'jenis'=> $request->jenis
+                'no_hp'=> $request->no_hp
+               
             ]);
             return redirect('/supplier/index')->with('status', 'Data Berhasil diubah');
     }

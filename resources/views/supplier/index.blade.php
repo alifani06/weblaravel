@@ -16,7 +16,8 @@
                     <th scope="col">Alamat</th>
                     <th scope="col">Email</th>
                     <th scope="col">No Telepon</th>
-                    <th scope="col">jenis</th>
+                    <th scope="col">Jenis</th>
+        
                     <th scope="col">Opi</th>
                 </tr>
                 </thead>

@@ -18,11 +18,20 @@
             @error('kode')<div class="invalid-feedback">{{ $message }}</div>@enderror
         </div>
         <div class="form-group">
+            <label for="supplier_id">Kode Supplier</label>
+            <input type="text" class="form-control @error('supplier_id') is-invalid @enderror" id="supplier_id" name="supplier_id" value="{{old('supplier_id')}}">
+            @error('supplier_id')<div class="invalid-feedback">{{ $message }}</div>@enderror
+        </div>
+        <div class="form-group">
             <label for="deskripsi">Deskripsi</label>
             <input type="text" class="form-control @error('deskripsi') is-invalid @enderror" id="deskripsi" name="deskripsi" value="{{old('deskripsi')}}">
             @error('deskripsi')<div class="invalid-feedback">{{ $message }}</div>@enderror
         </div>
-
+        <div class="form-group">
+            <label for="jenis">jenis</label>
+            <input type="text" class="form-control @error('jenis') is-invalid @enderror" id="jenis" name="jenis" value="{{old('jenis')}}">
+            @error('jenis')<div class="invalid-feedback">{{ $message }}</div>@enderror
+        </div>
 <button type="submit" class="btn btn-primary">Tambah</button>
     </form>
 
