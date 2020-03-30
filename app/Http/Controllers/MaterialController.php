@@ -51,7 +51,7 @@ class MaterialController extends Controller
         $request->validate([
             'nama' => 'required',
             'kode' => 'required|size:4',
-            'supplier_id' => 'required',
+
             'deskripsi' => 'required',
             'jenis' => 'required'
 
@@ -96,7 +96,7 @@ class MaterialController extends Controller
         $request->validate([
             'nama' => 'required',
             'kode' => 'required|size:4',
-            'supplier_id' => 'required',
+
             'deskripsi' => 'required',
             'jenis' => 'required'
 
@@ -104,8 +104,7 @@ class MaterialController extends Controller
         Material::where('id',$material->id)
             ->update([
                 'nama' => $request->nama,
-                'kode' => $request->kode,
-                'supplier_id' => $request->supplier_id,
+                'kode' => $request->kode,        
                 'deskripsi' => $request->deskripsi,
                 'jenis' => $request->jenis,
             ]);
