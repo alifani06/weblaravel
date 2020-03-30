@@ -16,7 +16,7 @@
                     <th scope="col">Alamat</th>
                     <th scope="col">Email</th>
                     <th scope="col">No Telepon</th>
-                    <th scope="col">Jenis Material</th>
+                    <th scope="col">jenis</th>
                     <th scope="col">Opi</th>
                 </tr>
                 </thead>
@@ -28,7 +28,7 @@
                         <td>{{$sup->alamat}}</td>
                         <td>{{$sup->email}}</td>
                         <td>{{$sup->no_hp}}</td>
-                        <td>{{$sup->jenis}}</td>
+                        <td>{{$sup->material->jenis}}</td>
                         <td>
                         <a href="{{$sup->id}}/edit" class="btn btn-success">Ubah</a>
                         <form action="/supplier/{{ $sup->id }}" method="post" class="d-inline">

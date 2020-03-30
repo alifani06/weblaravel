@@ -10,4 +10,10 @@ class Material extends Model
     // protected $table = 'material'; 
 
     protected $fillable = ['nama','kode','deskripsi'];
+
+    public function supplier()
+    {
+        // return $this->belongsTo('App\Supplier');
+        return $this->hasmany('App\Supplier');
+    }
 }
