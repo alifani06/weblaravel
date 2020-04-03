@@ -28,7 +28,7 @@
                         <td>{{$sup->alamat}}</td>
                         <td>{{$sup->email}}</td>
                         <td>{{$sup->no_hp}}</td>
-                        <td>{{$sup->material_jenis}}</td>
+                        <td>{{$sup->material->jenis}}</td>
                      
                         <td>
                         <a href="{{$sup->id}}/edit" class="btn btn-success">Ubah</a>
