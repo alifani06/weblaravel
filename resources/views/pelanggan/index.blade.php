@@ -16,6 +16,7 @@
                     <th scope="col">Alamat</th>
                     <th scope="col">Email</th>
                     <th scope="col">No Handphone</th>
+                    <th scope="col">No telepon</th>
                     <th scope="col">Opi</th>
                 </tr>
                 </thead>
