@@ -17,6 +17,7 @@
                     <th scope="col">Email</th>
                     <th scope="col">No Telepon</th>
                     <th scope="col">Jenis</th>
+                    <th scope="col">tambahan</th>
                     <th scope="col">Opi</th>
                 </tr>
                 </thead>
