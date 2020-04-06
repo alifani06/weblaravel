@@ -1,3 +1,6 @@
+@extends('layout/main')
+@section('content')
+
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
@@ -64,37 +67,21 @@
         </style>
     </head>
     <body>
-        <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @auth
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ route('login') }}">Login</a>
-
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}">Register</a>
-                        @endif
-                    @endauth
-                </div>
-            @endif
-
-            <div class="content">
-                <div class="title m-b-md">
-                    TOKO MATERIAL BERKAH JAYA
-                </div>
-
-                <div class="links">
-                    <a href="https://laravel.com/docs">Docs</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://blog.laravel.com">Blog</a>
-                    <a href="https://nova.laravel.com">Nova</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://vapor.laravel.com">Vapor</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
-                </div>
-            </div>
+    @section('content')
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <h4><i class="fa fa-info-circle"></i> Laravel 6.0 CRUD</h4>
+            <hr>
+            <p align="justify">
+        	    Aplikasi ini merupakan demo CRUD (create, read, update, delete) dengan Laravel 5.2. selain perintah CRUD,
+        	    juga memakai request validation untuk form inputnya. tambahan juga flash message untuk feedback ke user pada saat melakukan CRUD.
+        	    untuk designnya sendiri memakai bootstrap.
+            </p>
+            <p align="right">
+              	<a href="/materials/index"><button type="button" class="btn btn-primary btn-lg">START&nbsp;&nbsp;<i class="fa fa-arrow-circle-right"></i></button></a>
+            </p>
         </div>
+    </div>
+@endsection
     </body>
 </html>

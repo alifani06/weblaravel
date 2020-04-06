@@ -5,9 +5,21 @@
                     {{session ('status')}}
                 </div>
             @endif
+
+            <nav class="navbar navbar-light bg-light">
+                <form class="form-inline" action="{{url('cari')}}" method="GET">
+                    <input class="form-control mr-sm-4" type="text" name="cari" placeholder="cari" value="{{ old('cari') }}">
+                    <button class="btn btn-outline-primary my-2 my-sm-0" type="submit" value="CARI">Search</button>
+                </form>
+            </nav>  
 <div class="container">
     <div class="row">
-            <h1 class="mt-3">Daftar Pelanggan</h1>          
+  
+<!-- <form class="form-inline my-2 my-lg-4 "action="{{url('cari')}}" method="GET">
+	<input type="text" name="cari" placeholder="Cari Pelanggan" value="{{ old('cari') }}">
+	<input class="btn btn-primary" type="submit" value="CARI">
+</form>       -->
+
             <table class="table">
                 <thead class="thead-dark">
                 <tr>
@@ -16,7 +28,6 @@
                     <th scope="col">Alamat</th>
                     <th scope="col">Email</th>
                     <th scope="col">No Handphone</th>
-                    <th scope="col">No telepon</th>
                     <th scope="col">Opi</th>
                 </tr>
                 </thead>
@@ -41,6 +52,7 @@
                 @endforeach
                 </tbody>
             </table>
+            {{ $pelanggan->links() }}
         </div>
     </div>
 </div>

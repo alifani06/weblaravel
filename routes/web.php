@@ -25,7 +25,7 @@ Route::post('/pelanggan', 'PelangganController@store');
 Route::delete('/pelanggan/{pelanggan}', 'PelangganController@destroy');
 Route::get('/pelanggan/{pelanggan}/edit', 'PelangganController@edit');
 Route::patch('/pelanggan/{pelanggan}', 'PelangganController@update');
-
+Route::get('cari', 'PelangganController@cari');
 
 
 

@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Pelanggan;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+
 
 class PelangganController extends Controller
 {
@@ -12,10 +14,11 @@ class PelangganController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $pelanggan = Pelanggan::all();
-        return view('pelanggan.index', compact('pelanggan'));
+        $pelanggan = DB::table('pelanggan')->paginate(5);
+        // return view('pelanggan.index', compact('pelanggan'));
+        return view('pelanggan.index',['pelanggan' => $pelanggan]);
     }
 
     /**
@@ -112,4 +115,21 @@ class PelangganController extends Controller
         Pelanggan::destroy($pelanggan->id);
         return redirect('/pelanggan/index')->with('status', 'Data Berhasil dihapus'); 
     }
+
+
+    public function cari(Request $request)
+	{
+		// menangkap data pencarian
+		$cari = $request->cari;
+ 
+    		// mengambil data dari table pegawai sesuai pencarian data
+		$pelanggan = DB::table('pelanggan')
+		->where('nama','like',"%".$cari."%")
+		->paginate(5);
+ 
+    		// mengirim data pegawai ke view index
+		return view('/pelanggan/index',['pelanggan' => $pelanggan]);
+ 
+	}
+
 }
